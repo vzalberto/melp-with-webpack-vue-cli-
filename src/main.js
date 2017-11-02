@@ -7,6 +7,7 @@ import * as VueGoogleMaps from 'vue2-google-maps'
 
 import Header from './components/Header.vue'
 import Sidebar from './components/Sidebar.vue'
+import LocationMap from './components/LocationMap.vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import './css/style.css'
@@ -21,6 +22,7 @@ Vue.use(VueGoogleMaps, {
 
 Vue.component('app-header', Header)
 Vue.component('app-sidebar', Sidebar)
+Vue.component('location-map', LocationMap)
 
 new Vue({
   el: '#app',

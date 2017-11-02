@@ -54,10 +54,9 @@
 import StarRating from 'vue-star-rating'
 
 export default {
-  name: 'app',
+  props: ['locations'],
   data () {
     return {
-      locations: [],
       sortBy:    'rating',
       orderBy:    'des',
       searchQuery: ''
@@ -77,20 +76,6 @@ export default {
                 return element.name.match(new RegExp(this.searchQuery, 'i'));
             });
         }
-    },
-    methods: {
-        fetchLocations(){
-            this.$http.get('https://s3-us-west-2.amazonaws.com/lgoveabucket/data_melp.json', )
-              .then(response => {
-                return response.json();
-              })
-              .then(data => {
-                this.locations = data;
-              });
-          }
-    },
-      beforeMount(){
-          this.fetchLocations();
     },
     components: {
         StarRating
