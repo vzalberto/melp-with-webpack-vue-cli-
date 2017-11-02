@@ -65,7 +65,7 @@ body{
     color: #4f424b;
 }
 
-.map-container, .sidebar{
+.sidebar{
     height: 100%;
 }
 .map-container{
